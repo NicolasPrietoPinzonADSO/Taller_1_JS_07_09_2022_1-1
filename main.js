@@ -1,9 +1,15 @@
 addEventListener("DOMContentLoaded", ()=>{
-    // 4. Escribir un programa que calcule el área de un triángulo:
-    // Base = 7 altura = 4 área del triángulo = (base * altura)/2
-    let base = Number(prompt(`Ingrese la base`, 7));
-    let altura = Number(prompt(`Ingrese la altura`, 4));
-    let areaTri = (base * altura)/2
-    console.log(`La formula para hallar el area de un triangulo: (${base} * ${altura}) / 2`)
-    console.log(`El area del triangulo es: ${areaTri}`)
+// 5. Escribir un programa que calcule la longitud y el área de una circunferencia: Radio = 4
+    // Longitud de la circunferencia = 2 * PI * radio
+    // Área de la circunferencia = PI * radio˄2
+    let radio = Number(prompt(`Ingrese el radio `, 4));
+    let longitud = (2 * Math.PI * radio);
+    let area = (Math.PI * radio * Math.pow(radio,2));
+
+    console.group(`La formula para encontrar la longitud de una circunferencia: ${2} * ${Math.PI} * ${radio**2}`);  
+        console.log(`La longitud es: ${longitud}`);
+    console.groupEnd();
+    console.group(`La formula para encontrar el area de una circunferencia: ${Math.PI} * ${radio**2}`);
+        console.log(`el area es: ${area}`)
+    console.groupEnd();
     })
